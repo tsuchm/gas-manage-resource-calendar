@@ -5,7 +5,7 @@ const bookId = 'xxxxxxxx';
 
 const domainName = 'example.jp';
 
-const calendarAdministratorGroup = 'administrators@groups.example.jp';
+const calendarAdministratorGroup = '';
 
 const headerRow = 1;
 
@@ -14,7 +14,7 @@ function updateResourcesAndBuildings(){
   const book = SpreadsheetApp.openById(bookId);
   updateBuildings(book);
   updateResources(book);
-  deleteResources();
+  //deleteResources();
 }
 
 function updateBuildings(book){
