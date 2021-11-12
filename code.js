@@ -79,7 +79,7 @@ function updateResources(book){
     let id = normalizeResourceId(sheet.getRange(row, dict['Resource Id']).getValue().toString());
     let group = getResourceUserGroup(sheet.getRange(row, dict['Resource User']).getValue().toString());
     let name = sheet.getRange(row, dict['Resource Name']).getValue().toString();
-    let building = getBuildingId(sheet.getRange(row, dict['Building Id']).getValue().toString());
+    let building = getBuildingId(sheet.getRange(row, dict['Building Name']).getValue().toString());
     let category = getResourceCategory(sheet.getRange(row, dict['Resource Category']).getValue().toString());
     let type = sheet.getRange(row, dict['Resource Type']).getValue().toString();
     let floor = sheet.getRange(row, dict['Floor Name']).getValue().toString();
