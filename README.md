@@ -6,13 +6,19 @@ Google Workspace では，会議室や教室などの共有リソースを Googl
 
 ## What you can do
 
-[Google スプレッドシートで作成した共有リソースの一覧表（サンプル）](https://docs.google.com/spreadsheets/d/17B878jFYrAdxMbcGf4YNSYkKGNZOeRGaXIUuZQRMuds/edit?usp=sharing)に基づいて，共有リソースを一括作成できます．よって，このスプレッドシートを共有するアカウントを適切に設定することによって，共有リソースを追加・設定する権限を移譲できることになります．
+Google スプレッドシートで作成した共有リソースの一覧表（[サンプル](https://docs.google.com/spreadsheets/d/17B878jFYrAdxMbcGf4YNSYkKGNZOeRGaXIUuZQRMuds/edit?usp=sharing)）に基づいて，共有リソースを一括作成できます．よって，このスプレッドシートを共有するアカウントを適切に設定することによって，共有リソースを追加・設定する権限を移譲できることになります．
 
 ## Usage
 
-(1) [自組織向けの共有リソースの一覧表](https://docs.google.com/spreadsheets/d/17B878jFYrAdxMbcGf4YNSYkKGNZOeRGaXIUuZQRMuds/edit?usp=sharing)を作成する．
+(1) 自組織向けの共有リソースの一覧表（[サンプル](https://docs.google.com/spreadsheets/d/17B878jFYrAdxMbcGf4YNSYkKGNZOeRGaXIUuZQRMuds/edit?usp=sharing)）を作成する．
 
-Buildings シートが建物の一覧表であり，一括登録用のCSVファイルの[フォーマット](https://support.google.com/a/answer/1033925#calendar-format)の抜粋である．Resources シートが共有リソースの一覧表であり，一括登録用のCSVファイルの[フォーマット](https://support.google.com/a/answer/1033925#calendar-format)に加えて，`Resource User` という欄が追加されている．この欄には，当該共有リソースを利用できる構成員グループの名前を指定する．構成員グループの名前とグループアドレスの対応関係は ResourceUserGroups シートに登録しておく．
+Buildings シートが建物の一覧表であり，一括登録用のCSVファイルの[フォーマット](https://support.google.com/a/answer/1033925#calendar-format)の抜粋である．
+作成済みの建物の一覧表は[管理コンソール > ディレクトリ > ビルディングとリソース > リソース管理](https://admin.google.com/ac/calendarresources/buildings)から一括ダウンロードできるので，ダウンロードしたCSVファイルの内容を Buildings シートに貼り付けると，現状の設定内容そのままの一覧表を作成できる．
+
+Resources シートが共有リソースの一覧表であり，一括登録用のCSVファイルの[フォーマット](https://support.google.com/a/answer/1033925#calendar-format)に加えて，`Resource User`列が追加されている．`Resource User`列には，当該共有リソースを利用できる構成員グループの名前を指定する．構成員グループの名前とグループアドレスの対応関係は ResourceUserGroups シートに登録しておく．
+`Resource Id`列は，当該共有リソースを識別するためのIDである．新規に共有リソースを追加する場合は空欄にしておく．
+`Resource Calendar`列は，当該共有リソースのカレンダーに対するURLである．スクリプトにより更新されるので，空欄で良い．
+作成済みの共有リソースの一覧表は[管理コンソール > ディレクトリ > ビルディングとリソース > リソース管理](https://admin.google.com/ac/calendarresources/resources)から一括ダウンロードできるので，ダウンロードしたCSVファイルの内容を Resources シートに列を調整しながら貼り付けると，現状の設定内容そのままの一覧表を作成できる．
 
 (2) ドメイン全体の管理者として [Apps Script](https://script.google.com) にアクセス．新しいプロジェクトを用意して code.js を配置．
 
