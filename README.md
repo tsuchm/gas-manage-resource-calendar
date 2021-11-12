@@ -21,7 +21,9 @@ Resources シートが共有リソースの一覧表である．一括登録用�
 
 第2に，`Building Id`列に代えて，`Building Name`列がある．建物IDと建物名の対応関係は，Buildings シートに登録しておく．
 
-第3に，`Resource Calendar`列が追加されている．この列は，当該共有リソースのカレンダーに対するURLである．スクリプトにより更新されるので，空欄で良い．
+第3に，`Resource Category`列は日本語化されている．`Resource Category`の英名と和名の対応関係は，ResourceCategories シートに登録しておく．
+
+第4に，`Resource Calendar`列が追加されている．この列は，当該共有リソースのカレンダーに対するURLである．スクリプトにより更新されるので，空欄で良い．
 
 `Resource Id`列は，当該共有リソースを識別するためのIDである．新規に共有リソースを追加する場合は空欄にしておく．
 作成済みの共有リソースの一覧表は[管理コンソール > ディレクトリ > ビルディングとリソース > リソース管理](https://admin.google.com/ac/calendarresources/resources)から一括ダウンロードできるので，ダウンロードしたCSVファイルを Resources シートに内容を調整しながら貼り付けると，現状の設定内容そのままの一覧表を作成できる．
