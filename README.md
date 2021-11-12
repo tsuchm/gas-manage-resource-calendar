@@ -13,12 +13,18 @@ Google スプレッドシートで作成した共有リソースの一覧表（[
 (1) 自組織向けの共有リソースの一覧表（[サンプル](https://docs.google.com/spreadsheets/d/17B878jFYrAdxMbcGf4YNSYkKGNZOeRGaXIUuZQRMuds/edit?usp=sharing)）を作成する．
 
 Buildings シートが建物の一覧表であり，一括登録用のCSVファイルの[フォーマット](https://support.google.com/a/answer/1033925#calendar-format)の抜粋である．
-作成済みの建物の一覧表は[管理コンソール > ディレクトリ > ビルディングとリソース > リソース管理](https://admin.google.com/ac/calendarresources/buildings)から一括ダウンロードできるので，ダウンロードしたCSVファイルの内容を Buildings シートに貼り付けると，現状の設定内容そのままの一覧表を作成できる．
+作成済みの建物の一覧表は[管理コンソール > ディレクトリ > ビルディングとリソース > リソース管理](https://admin.google.com/ac/calendarresources/buildings)から一括ダウンロードできるので，ダウンロードしたCSVファイルを Buildings シートに貼り付けると，現状の設定内容そのままの一覧表を作成できる．
 
-Resources シートが共有リソースの一覧表であり，一括登録用のCSVファイルの[フォーマット](https://support.google.com/a/answer/1033925#calendar-format)に加えて，`Resource User`列が追加されている．`Resource User`列には，当該共有リソースを利用できる構成員グループの名前を指定する．構成員グループの名前とグループアドレスの対応関係は ResourceUserGroups シートに登録しておく．
+Resources シートが共有リソースの一覧表である．一括登録用のCSVファイルの[フォーマット](https://support.google.com/a/answer/1033925#calendar-format)と基本的な部分は同じであるが，幾つかの相違点がある．
+
+第1に，`Resource User`列が追加されている．`Resource User`列には，当該共有リソースを利用できる構成員グループの名前を指定する．構成員グループの名前とグループアドレスの対応関係は ResourceUserGroups シートに登録しておく．
+
+第2に，`Building Id`列に代えて，`Building Name`列がある．建物IDと建物名の対応関係は，Buildings シートに登録しておく．
+
+第3に，`Resource Calendar`列が追加されている．この列は，当該共有リソースのカレンダーに対するURLである．スクリプトにより更新されるので，空欄で良い．
+
 `Resource Id`列は，当該共有リソースを識別するためのIDである．新規に共有リソースを追加する場合は空欄にしておく．
-`Resource Calendar`列は，当該共有リソースのカレンダーに対するURLである．スクリプトにより更新されるので，空欄で良い．
-作成済みの共有リソースの一覧表は[管理コンソール > ディレクトリ > ビルディングとリソース > リソース管理](https://admin.google.com/ac/calendarresources/resources)から一括ダウンロードできるので，ダウンロードしたCSVファイルの内容を Resources シートに列を調整しながら貼り付けると，現状の設定内容そのままの一覧表を作成できる．
+作成済みの共有リソースの一覧表は[管理コンソール > ディレクトリ > ビルディングとリソース > リソース管理](https://admin.google.com/ac/calendarresources/resources)から一括ダウンロードできるので，ダウンロードしたCSVファイルを Resources シートに内容を調整しながら貼り付けると，現状の設定内容そのままの一覧表を作成できる．
 
 (2) ドメイン全体の管理者として [Apps Script](https://script.google.com) にアクセス．新しいプロジェクトを用意して code.js を配置．
 
