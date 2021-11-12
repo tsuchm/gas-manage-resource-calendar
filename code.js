@@ -224,7 +224,7 @@ function lookupSheet(target, sheetName, keyName, valueName) {
   }
   const keys = sheet.getRange(headerRow + 1, keyColumn, sheet.getLastRow()).getValues();
   const row = keys.findIndex(function(elem){return target==elem[0];}) + headerRow + 1;
-  if (row >= 1) {
+  if (row > headerRow) {
     return sheet.getRange(row, valueColumn).getValue().toString();
   }
   return undefined;
