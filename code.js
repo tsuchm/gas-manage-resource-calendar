@@ -386,6 +386,7 @@ function setResourceCalndarACL(resource, scopeType, scopeValue, role) {
   }
   if (acl) {
     if (acl.role != role) {
+      acl.role = role;
       Calendar.Acl.update(acl, calendarId, acl.id, {sendNotifications: false});
       pushLogMessage(`ACLが更新されました: resourceId=${resource.resourceId}, resourceName=${resource.resourceName}, scopeType=${scopeType}, scopeValue=${scopeValue}, old=${acl.role}, new=${role}`);
     }
