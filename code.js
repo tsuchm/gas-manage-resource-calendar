@@ -18,7 +18,7 @@ function updateResourcesAndBuildings(){
   logMessages = [];
   updateBuildings();
   updateResources();
-  deleteResources();
+  //deleteResources();
   if (logMessages.length > 0){
     if (logNotifyAddress) {
       GmailApp.sendEmail(logNotifyAddress, `Resource Calendar Management Result for ${domainName}`, logMessages.join("\n"));
