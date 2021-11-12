@@ -30,11 +30,12 @@ Resources シートが共有リソースの一覧表である．一括登録用�
 
 (2) ドメイン全体の管理者として [Apps Script](https://script.google.com) にアクセス．新しいプロジェクトを用意して code.js を配置．
 
-(3) サービスとして，以下の3つを有効化．
+(3) サービスとして，以下の4つを有効化．
 
  * Admin SDK API service
  * Google Calendar API service
  * Google Sheets API service
+ * Gmail API service
 
 (4) code.js 先頭のカスタマーID，一覧表のスプレッドシートID，ドメイン名を正しく設定する．
 
